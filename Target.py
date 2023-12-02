@@ -22,4 +22,5 @@ sleep(6)  # wait for ads to disappear
 search_results_header = driver.find_element(By.CSS_SELECTOR, "[data-test='resultsHeading']").text
 assert 'coffee' in search_results_header, f'Expected text coffee not in {search_results_header}'
 
-driver.quit()=
+driver.quit()
+
