@@ -1,14 +1,16 @@
 from behave import given, when, then
+from time import sleep
 
 
 @given('Open target main page')
 def open_target(context):
-    context.driver.get('https://www.target.com/')
+    context.app.main_page.open_main()
 
 
 @when('Click on Cart Icon')
 def click_on_cart(context):
     context.app.main_page.click_cart_icon()
+    sleep(6)
 
 
 @then('Verify "Your cart is empty"')
