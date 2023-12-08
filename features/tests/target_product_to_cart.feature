@@ -7,3 +7,4 @@ Feature: Ensure product is in Cart
     When Click new search button
     When Add to cart
     Then Verify Banana is added in cart
+
