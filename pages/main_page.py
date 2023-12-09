@@ -9,6 +9,10 @@ class MainPage(Page):
     SEARCH_BTN = (By.CSS_SELECTOR, "[data-test='@web/Search/SearchButton']")
     CART_ICON = (By.CSS_SELECTOR, "image[href='https://assets.targetimg1.com/icons/assets/glyph/Cart.svg#Cart']")
     SIGNIN_ICON = (By.CSS_SELECTOR, ".styles__LinkText-sc-1e1g60c-3")
+    INPUT_SEARCH = (By.CSS_SELECTOR, '#search')
+    PRODUCT_TO_CART = (By.CSS_SELECTOR, '#addToCartButtonOrTextIdFor15013944')
+    CART_ITEM = (By.CSS_SELECTOR, "h4[class='styles__StyledHeading-sc-1xmf98v-0 dQsNJZ']")
+
     def open_main(self):
         self.open_url('https://www.target.com/')
 
