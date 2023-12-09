@@ -8,7 +8,7 @@ class MainPage(Page):
     SEARCH_FIELD = (By.ID, 'search')
     SEARCH_BTN = (By.CSS_SELECTOR, "[data-test='@web/Search/SearchButton']")
     CART_ICON = (By.CSS_SELECTOR, "image[href='https://assets.targetimg1.com/icons/assets/glyph/Cart.svg#Cart']")
-
+    SIGNIN_ICON = (By.CSS_SELECTOR, ".styles__LinkText-sc-1e1g60c-3")
     def open_main(self):
         self.open_url('https://www.target.com/')
 
@@ -18,4 +18,9 @@ class MainPage(Page):
         sleep(6)  # wait for ads to disappear
 
     def click_cart_icon(self):
-        self.click(*self.CART_ICON)
+        self.wait_for_element_click(*self.CART_ICON)
+        element = self.wait_for_element_appear()
+        element.send_keys
+
+    def click_signin(self):
+        self.driver.find_element(*self.SIGNIN_ICON).click()
